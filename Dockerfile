@@ -33,6 +33,7 @@ COPY --from=build /finalfs /
 # Final
 # =========================================================================
 ENV VAR_LINUX_USER="dropbear" \
+    VAR_CONFIG_DIR="/etc/dropbear" \
     VAR_FINAL_COMMAND='dropbear -F -p $VAR_LISTEN -P $VAR_PID_FILE $dboptions'
      
 # Generic template (don't edit) <BEGIN>
